@@ -3,5 +3,9 @@
   "private": true,
   "workspaces": ["frontend", "backend"],
   "devDependencies": {
+  },
+  "scripts": {
+    "build": "yarn workspace frontend build",
+    "start": "yarn workspace backend start"
   }
 }
