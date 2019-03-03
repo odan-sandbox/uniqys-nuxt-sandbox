@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "private": true,
   "devDependencies": {
+    "@nuxt/typescript": "^2.4.5",
+    "@nuxt/vue-app": "^2.4.5",
+    "@types/node": "^11.10.4",
+    "@types/web3": "^1.0.18",
     "nuxt-ts": "^2.4.5"
   },
   "scripts": {
@@ -11,6 +15,10 @@
     "start": "nuxt-ts start"
   },
   "dependencies": {
+    "@uniqys/easy-client": "^0.2.0",
     "vue-property-decorator": "^7.3.0"
+  },
+  "resolutions": {
+    "@uniqys/easy-client/web3": "1.0.0-beta.36"
   }
 }

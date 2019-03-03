@@ -1,0 +1,12 @@
+{
+  "unique": "63ef90f2825a740756407e397865001a775790aa234119af3d86d60ea821b33e592dbe6f4b681b4c",
+  "timestamp": 1551633482,
+  "validatorSet": [
+    {
+      "address": "0a4394a80e2ed50695f465aa5f2172d30df8f548",
+      "power": 1
+    }
+  ],
+  "initApp": "",
+  "startApp": "yarn start"
+}
