@@ -2,5 +2,8 @@
   "name": "uniqys-nuxt-sandbox",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@uniqys/cli": "^0.2.0"
+  }
 }
