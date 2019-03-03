@@ -1,5 +1,16 @@
 {
   "name": "frontend",
   "version": "1.0.0",
-  "private": true
+  "private": true,
+  "devDependencies": {
+    "nuxt-ts": "^2.4.5"
+  },
+  "scripts": {
+    "dev": "nuxt-ts",
+    "build": "nuxt-ts build",
+    "start": "nuxt-ts start"
+  },
+  "dependencies": {
+    "vue-property-decorator": "^7.3.0"
+  }
 }
