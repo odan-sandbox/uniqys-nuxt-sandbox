@@ -1,5 +1,6 @@
 import path from "path"
 import express from "express"
+import api from "./api";
 const { Nuxt } = require('nuxt')
 
 const FRONTEND_DIR = path.join(__dirname, "../../frontend")
@@ -16,6 +17,8 @@ const app = express()
 app.get('/hello', function(_, res) {
     res.send('hello');
 });
+
+app.use('/api', api)
 
 app.use(nuxt.render)
 
