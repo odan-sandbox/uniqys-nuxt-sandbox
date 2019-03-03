@@ -1,9 +1,7 @@
 {
   "name": "uniqys-nuxt-sandbox",
-  "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT",
+  "private": true,
+  "workspaces": ["frontend", "backend"],
   "devDependencies": {
-    "@uniqys/cli": "^0.2.0"
   }
 }
