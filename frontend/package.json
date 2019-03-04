@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "devDependencies": {
+    "@nuxt/config-edge": "^2.5.0-25860970.be89ea1b",
     "@nuxt/typescript": "^2.4.5",
     "@nuxt/vue-app": "^2.4.5",
     "@types/node": "^11.10.4",

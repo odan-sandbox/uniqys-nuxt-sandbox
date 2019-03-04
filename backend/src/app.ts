@@ -1,7 +1,7 @@
 import path from "path"
 import express from "express"
-import request from "request"
 import bodyParser from "body-parser"
+import proxy from "http-proxy-middleware"
 import api from "./api";
 const { Nuxt } = require('nuxt')
 
@@ -11,11 +11,10 @@ const APP_PORT = 5650
 const OUTER_API_HOST = '127.0.0.1'
 const OUTER_API_PORT = 5651
 
-const config = require(path.join(FRONTEND_DIR, './nuxt.config.ts'))
+const config = require(path.join(FRONTEND_DIR, './nuxt.config.ts')).default
 config.buildDir = path.join(FRONTEND_DIR, config.buildDir || '.nuxt')
 // why
 config.dev = false
-console.log(config)
 const nuxt = new Nuxt(config)
 
 const app = express()
@@ -26,16 +25,12 @@ app.get('/hello', function(_, res) {
     res.send('hello');
 });
 
-app.get('/uniqys/*', function(req, res) {
-  console.log("proxy: ", req.path)
-  const path = req.path.slice('/uniqys/'.length)
-  console.log(path)
-  request({
-    uri: `http://${OUTER_API_HOST}:${OUTER_API_PORT}/${path}`,
-    method: req.method,
-    headers: req.headers,
-  }).pipe(res)
-})
+app.get('/uniqys/*', proxy({
+  target: `http://${OUTER_API_HOST}:${OUTER_API_PORT}`,
+  pathRewrite: {
+    '^/uniqys': ''
+  }
+}))
 
 app.use('/api', api)
 
