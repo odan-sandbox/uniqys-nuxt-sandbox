@@ -1,0 +1,18 @@
+{
+  "name": "aws",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "ts-node src/app.ts",
+    "cdk:compile": "yarn tsc -p tsconfig.json",
+    "cdk:watch": "yarn cdk:compile -w"
+  },
+  "devDependencies": {
+    "@aws-cdk/aws-ecr": "^0.25.0",
+    "@aws-cdk/aws-ecs": "^0.25.0",
+    "@aws-cdk/cdk": "^0.25.0",
+    "@types/node": "^11.10.4",
+    "aws-cdk": "^0.25.0",
+    "typescript": "^3.3.3333"
+  }
+}

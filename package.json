@@ -1,7 +1,7 @@
 {
   "name": "uniqys-nuxt-sandbox",
   "private": true,
-  "workspaces": ["frontend", "backend"],
+  "workspaces": ["frontend", "backend", "aws"],
   "devDependencies": {
   },
   "scripts": {
