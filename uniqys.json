@@ -19,7 +19,7 @@
       "port": 5652,
       "host": "127.0.0.1"
     },
-    "appStartTimeout": 10000
+    "appStartTimeout": 50000
   },
   "network": {
     "port": 5665,

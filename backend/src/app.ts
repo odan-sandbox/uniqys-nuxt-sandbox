@@ -6,10 +6,13 @@ import api from "./api";
 const { Nuxt } = require('nuxt')
 
 const FRONTEND_DIR = path.join(__dirname, "../../frontend")
-const APP_HOST = 'localhost'
+const APP_HOST = '0.0.0.0'
 const APP_PORT = 5650
 const OUTER_API_HOST = '127.0.0.1'
 const OUTER_API_PORT = 5651
+
+console.log("poyo")
+process.stdout.write("poyo\n")
 
 const config = require(path.join(FRONTEND_DIR, './nuxt.config.ts')).default
 config.buildDir = path.join(FRONTEND_DIR, config.buildDir || '.nuxt')

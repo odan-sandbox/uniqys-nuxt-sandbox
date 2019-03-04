@@ -8,7 +8,7 @@ export class ContainerEnvStack extends cdk.Stack {
     super(parent, id, props);
 
     const vpc = new ec2.VpcNetwork(this, 'Vpc', {
-      maxAZs: 1
+      maxAZs: 2
     });
 
     const cluster = new ecs.Cluster(this, 'Cluster', {
