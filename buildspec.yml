@@ -1,0 +1,9 @@
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      - docker build -t uniqys-nuxt-sandbox .
+      - docker build --target deploy -t uniqys-nuxt-sandbox:deploy .
+      - docker build --target prod -t uniqys-nuxt-sandbox:prod .
+
