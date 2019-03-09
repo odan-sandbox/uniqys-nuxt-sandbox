@@ -17,7 +17,7 @@ export default class Home extends Vue {
   public inputMessage: string = "";
   public client!: EasyClientForBrowser;
   async mounted() {
-    this.client = new EasyClientForBrowser('http://localhost:8080')
+    this.client = new EasyClientForBrowser((window as any).origin)
     console.log("created")
     await this.update()
   }

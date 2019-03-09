@@ -33,4 +33,6 @@ ENTRYPOINT ["/tini", "--"]
 RUN mkdir .data
 ENV DEBUG chain-core*,easy*,p2p*
 
+EXPOSE 8080
+
 CMD ["yarn", "uniqys", "start"]
