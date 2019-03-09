@@ -1,0 +1,15 @@
+version: "3"
+services:
+  dapp:
+    image: uniqys-nuxt-sandbox:dapp
+    build:
+      context: .
+      dockerfile: docker/dapp/Dockerfile
+
+  deploy:
+    image: uniqys-nuxt-sandbox:deploy
+    build:
+      context: .
+      dockerfile: docker/deploy/Dockerfile
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock

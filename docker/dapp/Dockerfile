@@ -1,4 +1,4 @@
-FROM node:10 AS setup
+FROM node:10
 
 WORKDIR /app
 
@@ -10,18 +10,6 @@ COPY aws/package.json /app/aws/
 RUN yarn install
 
 COPY ./ /app/
-
-FROM node:10 AS deploy
-
-WORKDIR /app
-COPY --from=setup /app /app
-
-RUN yarn workspace aws cdk:compile
-
-FROM node:10 AS prod
-
-WORKDIR /app
-COPY --from=setup /app /app
 
 RUN yarn build
 
