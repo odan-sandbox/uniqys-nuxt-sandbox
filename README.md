@@ -19,7 +19,7 @@ $ yarn workspace aws cdk:compile
 ```bash
 $ yarn workspace aws cdk deploy DeployStack
 $ git archive `git stash create` --output=source.zip
-$ aws s3 cp source.zip s3://uniqys-nuxt-sandbox-source/
+$ aws s3 cp source.zip s3://uniqys-nuxt-sandbox-code-bucket/
 ```
 
 ### Push to ECR
