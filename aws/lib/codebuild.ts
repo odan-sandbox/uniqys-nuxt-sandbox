@@ -1,4 +1,3 @@
-import path from "path"
 import * as cdk from "@aws-cdk/cdk";
 import * as codebuild from "@aws-cdk/aws-codebuild";
 import * as s3 from "@aws-cdk/aws-s3";
