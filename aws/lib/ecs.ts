@@ -16,9 +16,14 @@ export class ContainerEnvStack extends cdk.Stack {
       vpc: vpc
     });
 
-    new ecs.LoadBalancedFargateService(this, 'DAppService', {
+    cluster.addCapacity("uniqys-nuxt-sandbox-cluster-capacity", {
+      instanceType: new ec2.InstanceType("t2.small")
+    })
+
+    new ecs.LoadBalancedEc2Service(this, 'DAppService', {
       containerPort: 8080,
       desiredCount: 1,
+      memoryLimitMiB: 1024,
       cluster: cluster,  // Required
       image: ecs.ContainerImage.fromEcrRepository(ecr.Repository.import(this, "poyo", repositoryImportProps)),
       publicLoadBalancer: true  // Default is false
