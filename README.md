@@ -15,7 +15,7 @@ $ export AWS_DEFAULT_REGION=ap-northeast-1
 $ yarn workspace aws cdk:compile
 ```
 
-### 
+### Setup Codebuild
 ```bash
 $ yarn workspace aws cdk deploy DeployStack
 $ git archive `git stash create` --output=source.zip
