@@ -2,7 +2,7 @@ FROM docker
 
 WORKDIR /app
 
-RUN apk add --update make bash git python py-pip nodejs npm yarn
+RUN apk add --update make bash git g++ python py-pip nodejs npm yarn
 RUN pip install awscli
 
 COPY ./ /app/
