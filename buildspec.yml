@@ -1,9 +1,8 @@
 version: 0.2
 
 phases:
-  pre_build:
+  build:
     commands:
-      - docker build --target setup -t uniqys-nuxt-sandbox:setup .
-      - docker build --target deploy -t uniqys-nuxt-sandbox:deploy .
-      - docker build --target prod -t uniqys-nuxt-sandbox:prod .
-
+      - docker-compose build
+      - docker-compose run --rm deploy ./bin/build_and_push_dapp.sh
+      - docker-compose run --rm deploy ./bin/deploy.sh

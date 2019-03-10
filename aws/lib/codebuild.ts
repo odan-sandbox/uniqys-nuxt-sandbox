@@ -6,8 +6,8 @@ export class DeployStack extends cdk.Stack {
   constructor(parent: cdk.App, id: string, props?: cdk.StackProps) {
     super(parent, id, props);
 
-    const bucket = new s3.Bucket(this, "uniqys-nuxt-sandbox-source", {
-      bucketName: "uniqys-nuxt-sandbox-source"
+    const bucket = new s3.Bucket(this, "uniqys-nuxt-sandbox-source-bucket", {
+      bucketName: "uniqys-nuxt-sandbox-source-bucket"
     });
     new codebuild.Project(this, "uniqys-nuxt-sandbox-builder", {
       projectName: "uniqys-nuxt-sandbox-builder",

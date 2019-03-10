@@ -11,6 +11,9 @@ services:
     build:
       context: .
       dockerfile: docker/deploy/Dockerfile
+    environment:
+      AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION
+      AWS_CONTAINER_CREDENTIALS_RELATIVE_URI: $AWS_CONTAINER_CREDENTIALS_RELATIVE_URI
     volumes:
       - .:/app
       - /var/run/docker.sock:/var/run/docker.sock
