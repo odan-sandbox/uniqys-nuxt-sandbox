@@ -3,7 +3,7 @@ FROM docker
 WORKDIR /app
 
 RUN apk add --update make bash git g++ python py-pip nodejs npm yarn
-RUN pip install awscli
+RUN pip install awscli docker-compose
 
 COPY ./ /app/
 
