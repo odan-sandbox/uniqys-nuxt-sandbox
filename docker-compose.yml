@@ -14,3 +14,6 @@ services:
     volumes:
       - .:/app
       - /var/run/docker.sock:/var/run/docker.sock
+      - /app/node_modules
+      - /app/aws/node_modules
+      - /app/aws/bin
