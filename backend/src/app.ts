@@ -6,10 +6,10 @@ import api from "./api";
 const { Nuxt } = require('nuxt')
 
 const FRONTEND_DIR = path.join(__dirname, "../../frontend")
-const APP_HOST = process.env.EASY_APP_HOST
-const APP_PORT = process.env.EASY_APP_PORT
-const EASY_API_HOST = process.env.EASY_API_HOST
-const EASY_API_PORT = process.env.EASY_API_PORT
+const APP_HOST = process.env.EASY_APP_HOST || '0.0.0.0'
+const APP_PORT = Number(process.env.EASY_APP_PORT || '5650')
+const EASY_API_HOST = process.env.EASY_API_HOST || '127.0.0.1'
+const EASY_API_PORT = Number(process.env.EASY_API_PORT || '5651')
 
 console.log("poyo")
 process.stdout.write("poyo\n")
