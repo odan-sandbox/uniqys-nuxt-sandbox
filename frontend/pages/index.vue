@@ -3,6 +3,7 @@
     <input type="text" v-model="inputMessage">
     <button @click="submit()">submit</button>
     <div> poyo: {{ message }}</div>
+    <p>message sample</p>
   </div>
 </template>
 

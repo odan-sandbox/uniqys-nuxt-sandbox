@@ -25,7 +25,7 @@ export class ContainerEnvStack extends cdk.Stack {
       desiredCount: 1,
       memoryLimitMiB: 1024,
       cluster: cluster,  // Required
-      image: ecs.ContainerImage.fromEcrRepository(ecr.Repository.import(this, "poyo", repositoryImportProps)),
+      image: ecs.ContainerImage.fromEcrRepository(ecr.Repository.import(this, "container-registry", repositoryImportProps)),
       publicLoadBalancer: true  // Default is false
     });
   }

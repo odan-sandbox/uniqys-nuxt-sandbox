@@ -32,6 +32,5 @@ $ ./bin/build_and_push_dapp.sh
 ### Deploy to ECS
 ```bash
 $ yarn workspace aws cdk deploy ContainerEnvStack
-$ export SERVICE=`aws ecs list-services --cluster uniqys-nuxt-sandbox-cluster --query "serviceArns[0]" --output text`
-$ aws ecs update-service --cluster uniqys-nuxt-sandbox-cluster --service $SERVICE --force-new-deployment
+$ ./bin/deploy.sh
 ```
