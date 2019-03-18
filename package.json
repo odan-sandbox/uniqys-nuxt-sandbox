@@ -1,11 +1,19 @@
 {
   "name": "uniqys-nuxt-sandbox",
   "private": true,
-  "workspaces": ["frontend", "backend", "aws"],
+  "workspaces": [
+    "frontend",
+    "backend",
+    "aws"
+  ],
   "devDependencies": {
+    "npm-run-all": "^4.1.5"
   },
   "scripts": {
     "build": "yarn workspace frontend build",
-    "start": "yarn workspace backend start"
+    "start": "NODE_ENV=production yarn workspace backend start",
+    "dev:frontend": "NODE_ENV=development yarn workspace frontend dev",
+    "dev:backend": "NODE_ENV=development yarn workspace backend dev",
+    "dev": "run-p dev:*"
   }
 }

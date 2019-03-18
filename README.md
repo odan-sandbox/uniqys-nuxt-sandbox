@@ -7,6 +7,11 @@ $ yarn build
 $ yarn uniqys start
 ```
 
+## Development
+```bash
+$ yarn workspace backend uniqys start ../uniqys.dev.json
+```
+
 ## Deploy on aws
 
 ### Prepare

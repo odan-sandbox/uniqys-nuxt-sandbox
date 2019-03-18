@@ -11,8 +11,6 @@ const APP_PORT = Number(process.env.EASY_APP_PORT || '5650')
 const EASY_API_HOST = process.env.EASY_API_HOST || '127.0.0.1'
 const EASY_API_PORT = Number(process.env.EASY_API_PORT || '5651')
 
-console.log("poyo")
-process.stdout.write("poyo\n")
 
 const config = require(path.join(FRONTEND_DIR, './nuxt.config.ts')).default
 config.buildDir = path.join(FRONTEND_DIR, config.buildDir || '.nuxt')
@@ -37,7 +35,14 @@ app.get('/uniqys/*', proxy({
 
 app.use('/api', api)
 
-app.use(nuxt.render)
+if (process.env.NODE_ENV === 'production') {
+  app.use(nuxt.render)
+}
+else {
+  app.get('/*', proxy({
+    target: 'http://localhost:3000',
+  }))
+}
 
 console.log(`start listen: ${APP_HOST}:${APP_PORT}`)
 app.listen(APP_PORT, APP_HOST);
