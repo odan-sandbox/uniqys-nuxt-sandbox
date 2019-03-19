@@ -1,0 +1,28 @@
+{
+  "dapp": "dapp.json",
+  "dataDir": ".data",
+  "validatorKey": "validatorKey.json",
+  "easy": {
+    "gateway": {
+      "port": $PORT,
+      "host": "0.0.0.0"
+    },
+    "app": {
+      "port": 5650,
+      "host": "127.0.0.1"
+    },
+    "innerApi": {
+      "port": 5651,
+      "host": "127.0.0.1"
+    },
+    "innerMemcached": {
+      "port": 5652,
+      "host": "127.0.0.1"
+    },
+    "appStartTimeout": 100000
+  },
+  "network": {
+    "port": 5665,
+    "address": "0.0.0.0"
+  }
+}

@@ -1,1 +1,1 @@
-web: yarn uniqys start
+web: ./bin/generate_json.sh && yarn uniqys start
