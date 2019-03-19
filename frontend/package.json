@@ -16,6 +16,7 @@
     "start": "nuxt-ts start"
   },
   "dependencies": {
+    "@nuxtjs/vuetify": "^0.5.5",
     "@uniqys/easy-client": "^0.2.0",
     "vue-property-decorator": "^7.3.0"
   },
