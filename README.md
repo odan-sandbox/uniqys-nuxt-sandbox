@@ -6,7 +6,7 @@
 ```bash
 $ yarn
 $ yarn build
-$ yarn uniqys start
+$ yarn start
 ```
 
 ## Development
