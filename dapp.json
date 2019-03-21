@@ -8,5 +8,5 @@
     }
   ],
   "initApp": "",
-  "startApp": "yarn start"
+  "startApp": "yarn start:backend"
 }

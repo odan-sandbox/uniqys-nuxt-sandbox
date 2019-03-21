@@ -1,0 +1,9 @@
+env: flex
+runtime: nodejs
+
+readiness_check:
+  app_start_timeout_sec: 600
+
+automatic_scaling:
+  min_num_instances: 1
+  max_num_instances: 1

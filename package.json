@@ -11,7 +11,9 @@
   },
   "scripts": {
     "build": "yarn workspace frontend build",
-    "start": "NODE_ENV=production yarn workspace backend start",
+    "gcp-build": "yarn build && rm -rf frontend/node_modules && find . -name node_modules -type d | xargs rm -Rf",
+    "start": "yarn uniqys start",
+    "start:backend": "NODE_ENV=production yarn workspace backend start",
     "dev:frontend": "NODE_ENV=development yarn workspace frontend dev",
     "dev:backend": "NODE_ENV=development yarn workspace backend dev",
     "dev": "run-p dev:*"
