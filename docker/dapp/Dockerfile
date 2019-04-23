@@ -18,7 +18,7 @@ ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini /tini
 RUN chmod +x /tini
 ENTRYPOINT ["/tini", "--"]
 
-RUN mkdir .data
+RUN mkdir -p .data
 ENV DEBUG chain-core*,easy*,p2p*
 
 EXPOSE 8080
