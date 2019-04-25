@@ -7,6 +7,7 @@ services:
       dockerfile: docker/dapp/Dockerfile
     ports:
       - "8080:8080"
+      - "5665:5665"
 
   deploy:
     image: uniqys-nuxt-sandbox:deploy
