@@ -1,0 +1,9 @@
+{
+    "name": "Node.js Sample",
+    "dockerFile": "Dockerfile",
+    "appPort": 8080,
+    "extensions": [
+        "dbaeumer.vscode-eslint"
+    ],
+    "postCreateCommand": "yarn install && yarn build"
+}
